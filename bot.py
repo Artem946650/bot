@@ -10,9 +10,9 @@ def send_message(user_id, message):
 	})
 
 for event in VkLongPoll(session).listen():
-	if event.type == VkEventType.MASSAGE_NEW and event.to_me:
+	if event.type == VkEventType.MASSAGE_NEW:
 		text = event.text.lower()
 		chat_id = event.chat_id
 
 		if text == "hello":
-			send_message(cat_id, "Text")
+			send_message(chat_id, "Text")
