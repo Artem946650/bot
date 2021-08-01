@@ -4,7 +4,7 @@ session = vk_api.VkApi(token="960bde19ae45ba97070e6e4bd45f5a34f58c6be4e6a1ce57c3
 
 def send_message(user_id, message):
 	session.method("message.send",{
-		"user_id": user_id,
+		"chat_id": chat_id,
 		"message": message,
 		"random_id": 0
 	})
@@ -12,7 +12,7 @@ def send_message(user_id, message):
 for event in VkLongPoll(session).listen():
 	if event.type == VkEventType.MASSAGE_NEW and event.to_me:
 		text = event.text.lower()
-		user_id = event.chat_id
+		chat_id = event.chat_id
 
 		if text == "hello":
-			send_message(user_id, "Text")
+			send_message(cat_id, "Text")
