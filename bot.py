@@ -1,6 +1,6 @@
 import vk_api
 from vk_api.longpoll import VkLongPoll, VkEventType
-session = vk_api.VkApi(token="b8ce663972bc5f3a907ee526a3c3a357f07faa6d77b090e4219ab8c3df7224230b01cdc8f0a5be0680920")
+session = vk_api.VkApi(token="960bde19ae45ba97070e6e4bd45f5a34f58c6be4e6a1ce57c321e65a94fc657b026e1f7a582dc5e300109")
 
 def send_message(user_id, message):
 	session.method("message.send",{
